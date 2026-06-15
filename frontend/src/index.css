@@ -47,6 +47,7 @@ body {
   background-color: var(--bg-desktop);
   color: var(--text-main);
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -237,6 +238,7 @@ body {
   .device-frame {
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
     border: none;
     border-radius: 0;
     box-shadow: none;

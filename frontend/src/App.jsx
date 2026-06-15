@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Home as HomeIcon, Calendar, User, MessageSquare, Wifi, Battery } from 'lucide-react';
+import { Home as HomeIcon, Calendar, User, MessageSquare } from 'lucide-react';
 import Home from './components/Home';
 import Bookings from './components/Bookings';
 import Account from './components/Account';
@@ -16,7 +16,6 @@ function App() {
     return tab;
   });
   const [promoCode, setPromoCode] = useState('');
-  const [systemTime, setSystemTime] = useState('09:41');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [userDetails, setUserDetails] = useState(null);
@@ -81,24 +80,6 @@ function App() {
       setBookings([]);
     }
   }, [userDetails?.phone]);
-
-  // Update status bar time dynamically to match current time
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      let hours = now.getHours();
-      let minutes = now.getMinutes();
-      const ampm = hours >= 12 ? 'PM' : 'AM';
-      hours = hours % 12;
-      hours = hours ? hours : 12; // the hour '0' should be '12'
-      minutes = minutes < 10 ? '0' + minutes : minutes;
-      setSystemTime(`${hours}:${minutes} ${ampm}`);
-    };
-    
-    updateTime();
-    const interval = setInterval(updateTime, 60000);
-    return () => clearInterval(interval);
-  }, []);
 
   const handleAddBooking = async (newBooking) => {
     setBookings((prev) => {
@@ -170,16 +151,6 @@ function App() {
       <div className="device-frame">
         <div className="device-screen">
           
-          {/* iOS-styled Status Bar */}
-          <div className="status-bar">
-            <span>{systemTime}</span>
-            <div className="status-bar-icons">
-              <span style={{ fontSize: '11px', letterSpacing: '-0.3px', marginRight: '2px' }}>5G</span>
-              <Wifi style={{ width: '14px', height: '14px' }} />
-              <Battery style={{ width: '18px', height: '18px', transform: 'rotate(0deg)' }} />
-            </div>
-          </div>
-
           {/* Viewport rendering currently active tab */}
           <div className="content-viewport">
             {renderContent()}
