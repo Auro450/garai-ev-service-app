@@ -33,6 +33,12 @@ export default function Bookings({ bookings, onAddBooking, onCancelBooking, user
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
+      if (file.size > 5 * 1024) {
+        alert('File size must be less than 5 KB.');
+        e.target.value = ''; // Clear the selected file
+        setGstBill(null);
+        return;
+      }
       const validTypes = ['image/jpeg', 'image/jpg', 'application/pdf'];
       if (!validTypes.includes(file.type)) {
         alert('Invalid file format. Only JPG, JPEG, and PDF files are allowed.');

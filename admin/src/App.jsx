@@ -42,6 +42,12 @@ function ServiceRequests() {
     const file = e.target.files[0];
     if (!file) return;
 
+    if (file.size > 5 * 1024) {
+      alert('File size must be less than 5 KB.');
+      e.target.value = '';
+      return;
+    }
+
     const reader = new FileReader();
     reader.onloadend = async () => {
       const base64String = reader.result;
