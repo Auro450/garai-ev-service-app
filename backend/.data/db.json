@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "name": "Somshubhra Das",
+      "address": "",
+      "phone": "8240315692",
+      "email": "",
+      "scootyModels": [
+        ""
+      ],
+      "gender": "Male",
+      "password": "123456",
+      "id": "jsue-Ebb"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "1781554946826",
+      "refNumber": "SG-574959",
+      "evBike": "gfx",
+      "serviceType": "Free Service 1",
+      "serviceCentre": "Krishnanagar-Ghurni",
+      "date": "2026-06-17",
+      "customerName": "hgfd",
+      "customerPhone": "8240315692",
+      "notes": "",
+      "gstBill": null,
+      "pickupFromHome": false,
+      "pickupAddress": "",
+      "status": "Scheduled",
+      "createdAt": "6/16/2026"
+    },
+    {
+      "id": "1781555063700",
+      "refNumber": "SG-688916",
+      "evBike": "E4",
+      "serviceType": "Free Service 1",
+      "serviceCentre": "Krishnanagar-Ghurni",
+      "date": "2026-06-18",
+      "customerName": "Aabir das",
+      "customerPhone": "8240315692",
+      "notes": "",
+      "gstBill": null,
+      "pickupFromHome": false,
+      "pickupAddress": "",
+      "status": "Scheduled",
+      "createdAt": "6/16/2026"
+    },
+    {
+      "id": "1781555411736",
+      "refNumber": "SG-735005",
+      "evBike": "E#",
+      "serviceType": "Free Service 1",
+      "serviceCentre": "Krishnanagar-Ghurni",
+      "date": "2026-06-18",
+      "customerName": "Aabir das",
+      "customerPhone": "8240315692",
+      "notes": "",
+      "gstBill": null,
+      "pickupFromHome": true,
+      "pickupAddress": "Jadavpur, Kolkata: - 700133",
+      "status": "Scheduled",
+      "createdAt": "6/16/2026"
+    }
+  ],
+  "tickets": []
+}

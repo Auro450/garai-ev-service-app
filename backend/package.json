@@ -1,0 +1,16 @@
+{
+  "name": "garai-ev-service-backend",
+  "version": "1.0.0",
+  "description": "Backend for Garai EV Service App",
+  "main": "server.cjs",
+  "scripts": {
+    "start": "node server.cjs"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.7.0"
+  }
+}
