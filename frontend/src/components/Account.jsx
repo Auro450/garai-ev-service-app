@@ -307,8 +307,11 @@ export default function Account({ userDetails, onUpdateUserDetails }) {
           <div className="avatar-circle">
             <User size={32} color="#0e9f5d" />
           </div>
-          <h3 className="profile-phone">{userDetails?.name || userDetails?.phone || '+91-9547934724'}</h3>
-          {userDetails?.email && <p style={{ color: '#64748b', fontSize: '13px', marginTop: '-4px', marginBottom: '8px' }}>{userDetails.email}</p>}
+          <h3 className="profile-phone" style={{ marginBottom: '4px' }}>{userDetails?.name || 'User'}</h3>
+          <p style={{ color: '#475569', fontSize: '14px', fontWeight: '500', marginBottom: userDetails?.email ? '2px' : '8px' }}>
+            +91-{userDetails?.phone || 'XXXXXXXXXX'}
+          </p>
+          {userDetails?.email && <p style={{ color: '#64748b', fontSize: '13px', marginBottom: '8px' }}>{userDetails.email}</p>}
           <div className="verified-badge">
             <BadgeCheck size={14} color="#10b981" />
             <span>Verified User</span>
